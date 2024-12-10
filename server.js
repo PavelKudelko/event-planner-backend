@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-const concertRoutes = require('./routes/concerts');
+const eventRoutes = require('./routes/events');
 const authRoutes = require('./routes/auth');
 
 const port = 3000;
@@ -25,7 +25,7 @@ const run_server = async() => {
 
 run_server();
 
-app.use('/concerts', concertRoutes);
+app.use('/events', eventRoutes);
 app.use('/auth', authRoutes);
 
 app.get('/', (req, res) => {
