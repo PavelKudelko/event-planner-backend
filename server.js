@@ -28,6 +28,8 @@ run_server();
 app.use('/events', eventRoutes);
 app.use('/auth', authRoutes);
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+// Catch-all route for undefined routes
+app.use((req, res) => {
+    res.status(404).json({ status: 404, message: 'Route not found' });
+  });
+  
