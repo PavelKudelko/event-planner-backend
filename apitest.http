@@ -1,0 +1,33 @@
+### GET all envents
+GET http://localhost:3000/events
+
+### GET with query param
+GET http://localhost:3000/events?location=Stockholm
+
+### GET by Id
+GET http://localhost:3000/events/6758759e278426af5267e12b
+
+### DELETE Event
+DELETE http://localhost:3000/events/675877eeea4adf84d39ba722
+
+### POST Event
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "title": "Yung lean2",
+    "date": "2025-03-01",
+    "location": "Avicii Arena, Stockholm",
+    "description": "Yung Lean will perform his biggest homecoming show ever"
+}
+
+### Update Event
+PUT http://localhost:3000/events/67583b85b77d9fa982bc7f3f
+Content-Type: application/json
+
+{
+    "title": "Girl in Red - Updated",
+    "date": "05.10.2024",
+    "location": "Back Box, Jaahalli, HELSINKI",
+    "description": "Updated Europe Tour 2024 information"
+}
